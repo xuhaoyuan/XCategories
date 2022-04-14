@@ -2,7 +2,7 @@ import UIKit
 
 public extension UITableView {
 
-    public func registerCell<T: UITableViewCell>(_: T.Type) {
+    func registerCell<T: UITableViewCell>(_: T.Type) {
         let identifier = String(describing: T.self)
         let filePath: String = (Bundle.main.resourcePath ?? "") + "/" + identifier + ".nib"
         if FileManager.default.fileExists(atPath: filePath) {
@@ -12,25 +12,25 @@ public extension UITableView {
         }
     }
 
-    public func registerHeaderFooterClass<T: UITableViewHeaderFooterView>(_: T.Type) {
+    func registerHeaderFooterClass<T: UITableViewHeaderFooterView>(_: T.Type) {
         register(T.self, forHeaderFooterViewReuseIdentifier: String(describing: T.self))
     }
 
-    public func dequeueReusableCell<T: UITableViewCell>() -> T {
+    func dequeueReusableCell<T: UITableViewCell>() -> T {
         guard let cell = dequeueReusableCell(withIdentifier: String(describing: T.self)) as? T else {
             fatalError("Could not dequeue cell with identifier: \(String(describing: T.self))")
         }
         return cell
     }
 
-    public func dequeueReusableCell<T: UITableViewCell>(_ indexPath: IndexPath) -> T {
+    func dequeueReusableCell<T: UITableViewCell>(_ indexPath: IndexPath) -> T {
         guard let cell = dequeueReusableCell(withIdentifier: String(describing: T.self), for: indexPath) as? T else {
             fatalError("Could not dequeue cell with identifier: \(String(describing: T.self))")
         }
         return cell
     }
 
-    public func dequeueReusableHeaderFooter<T: UITableViewHeaderFooterView>() -> T {
+    func dequeueReusableHeaderFooter<T: UITableViewHeaderFooterView>() -> T {
         guard let view = dequeueReusableHeaderFooterView(withIdentifier: String(describing: T.self)) as? T else {
             fatalError("Could not dequeue HeaderFooter with identifier: \(String(describing: T.self))")
         }
