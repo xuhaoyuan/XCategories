@@ -1,6 +1,6 @@
 import UIKit
 
-open class EdgeLabel: UILabel {
+open class XEdgeLabel: UILabel {
     open var textInset = UIEdgeInsets.zero
 
     public init(inset: UIEdgeInsets) {

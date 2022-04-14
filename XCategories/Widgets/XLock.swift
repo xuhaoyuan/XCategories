@@ -1,11 +1,3 @@
-//
-//  XLock.swift
-//  qugame
-//
-//  Created by 许浩渊 on 2021/6/17.
-//  Copyright © 2021 Duodian. All rights reserved.
-//
-
 import Foundation
 
 private protocol XLock {

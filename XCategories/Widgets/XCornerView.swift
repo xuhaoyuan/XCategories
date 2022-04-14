@@ -1,6 +1,6 @@
 import UIKit
 
-open class CustomCornerView: UIView {
+open class XCornerView: UIView {
     open var cornerR: CGFloat
     open var roundingCorners: UIRectCorner
 

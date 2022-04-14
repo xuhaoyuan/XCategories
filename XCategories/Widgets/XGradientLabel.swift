@@ -1,6 +1,6 @@
 import UIKit
 
-public class GradientLabel: UIView {
+public class XGradientLabel: UIView {
 
     override open class var layerClass: AnyClass {
         return CAGradientLayer.self
