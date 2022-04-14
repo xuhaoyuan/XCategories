@@ -1,11 +1,3 @@
-//
-//  GradientLabel.swift
-//  CircleCommonUI
-//
-//  Created by 许浩渊 on 2019/8/13.
-//  Copyright © 2019 MoreTech. All rights reserved.
-//
-
 import UIKit
 
 public class GradientLabel: UIView {
@@ -57,7 +49,11 @@ public class GradientLabel: UIView {
         gradientLayer.colors = [UIColor(r: 252, g: 236, b: 214).cgColor,
                                 UIColor(r: 216, g: 164, b: 134).cgColor]
         addSubview(label)
-        label.constraintEqualToSuperView()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+        label.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+        label.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        label.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
     }
 
     public func set(beginColor: UIColor, endColor: UIColor) {

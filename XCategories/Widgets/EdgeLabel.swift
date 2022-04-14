@@ -1,5 +1,5 @@
 import UIKit
-///可以设置内边距
+
 open class EdgeLabel: UILabel {
     open var textInset = UIEdgeInsets.zero
 

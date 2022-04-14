@@ -1,11 +1,3 @@
-//
-//  UIStackView+Circle.swift
-//  CircleCommonUI
-//
-//  Created by 许浩渊 on 2020/4/21.
-//  Copyright © 2020 MoreTech. All rights reserved.
-//
-
 import UIKit
 
 extension UIStackView {

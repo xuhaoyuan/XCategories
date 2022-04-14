@@ -1,4 +1,5 @@
 import UIKit
+
 extension UICollectionView {
 
     public func registerCell<T: UICollectionViewCell>(_: T.Type) {
@@ -40,24 +41,6 @@ extension UICollectionView {
             fatalError("Could not dequeue cell with identifier: \(String(describing: T.self))")
         }
         return cell
-    }
-}
-
-private var selectItemWorkItemKey: Void?
-extension UICollectionView {
-
-    private var selectItemWorkItem: DispatchWorkItem? {
-        get { objc_getAssociatedObject(self, &selectItemWorkItemKey) as? DispatchWorkItem }
-        set {
-            objc_setAssociatedObject(self, &selectItemWorkItemKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-        }
-    }
-
-    public func delaySelectItem(time: TimeInterval = 0.1, work: @escaping () -> Void) {
-        selectItemWorkItem?.cancel()
-        let workItem = DispatchWorkItem(block: work)
-        DispatchQueue.main.asyncAfter(deadline: .now() + time, execute: workItem)
-        selectItemWorkItem = workItem
     }
 }
 

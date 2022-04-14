@@ -1,11 +1,3 @@
-//
-//  NotificationCenter+Circle.swift
-//  CircleCommonUI
-//
-//  Created by 许浩渊 on 2019/12/10.
-//  Copyright © 2019 MoreTech. All rights reserved.
-//
-
 import UIKit
 
 public struct KeyboardInfoValue {
@@ -57,8 +49,8 @@ extension NotificationCenter {
             let duration = (info[UIResponder.keyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue
             let curve = (info[UIResponder.keyboardAnimationCurveUserInfoKey] as? NSNumber)?.uintValue
             let isLocal = (info[UIResponder.keyboardIsLocalUserInfoKey] as? NSNumber)?.boolValue
-            let defaultRect = CGRect(x: 0, y: UIScreen.Bounds.height,
-                                     width: UIScreen.Bounds.width, height: 0)
+            let defaultRect = CGRect(x: 0, y: UIScreen.main.bounds.height,
+                                     width: UIScreen.main.bounds.width, height: 0)
             let keyboardInfo = KeyboardInfoValue(
                 frameBegin: beginUser ?? defaultRect,
                 frameEnd: endUser ?? defaultRect,

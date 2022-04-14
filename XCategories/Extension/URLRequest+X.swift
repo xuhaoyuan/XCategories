@@ -1,14 +1,14 @@
 import Foundation
 
 extension URLComponents {
-    mutating func append(querys: [URLQueryItem]?) {
+    public mutating func append(querys: [URLQueryItem]?) {
         guard let querys = querys else { return }
         var tmp = queryItems ?? []
         tmp.append(contentsOf: querys)
         self.queryItems = tmp
     }
 
-    mutating func appendQuery(key: String, value: String) {
+    public mutating func appendQuery(key: String, value: String) {
         let query = URLQueryItem(name: key, value: value)
         append(querys: [query])
     }
@@ -108,7 +108,7 @@ extension URLRequest {
                 let escapedString = httpBodyString.replacingOccurrences(of: "\"", with: "\\\"")
                 components.append("-d \"\(escapedString)\"")
             } else {
-                dPrint("can not append \(httpBody)")
+                print("can not append \(httpBody)")
             }
         }
 

@@ -1,8 +1,4 @@
 import Foundation
-import CommonCrypto
-#if QUGAME
-import DifferenceKit
-#endif
 
 extension String {
     public func short(_ number: Int) -> String {
@@ -21,10 +17,6 @@ extension String {
     }
 }
 
-#if QUGAME
-
-extension String: Differentiable {}
-
 extension String {
     func QRCode() -> UIImage? {
         let data = self.data(using: String.Encoding.ascii)
@@ -35,4 +27,3 @@ extension String {
         return UIImage(ciImage: output)
     }
 }
-#endif

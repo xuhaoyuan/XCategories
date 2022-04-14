@@ -2,7 +2,7 @@ import UIKit
 
 extension UIButton {
 
-    convenience init(title: String? = nil, titleColor: UIColor? = nil, font: UIFont? = nil, titleEdge: UIEdgeInsets? = nil, image: UIImage? = nil, imageEdge: UIEdgeInsets? = nil, bgImage: UIImage? = nil, bgColor: UIColor? = nil, edge: UIEdgeInsets? = nil, borderWidth: CGFloat? = nil, borderColor: UIColor? = nil, cornerRadius: CGFloat? = nil) {
+    public convenience init(title: String? = nil, titleColor: UIColor? = nil, font: UIFont? = nil, titleEdge: UIEdgeInsets? = nil, image: UIImage? = nil, imageEdge: UIEdgeInsets? = nil, bgImage: UIImage? = nil, bgColor: UIColor? = nil, edge: UIEdgeInsets? = nil, borderWidth: CGFloat? = nil, borderColor: UIColor? = nil, cornerRadius: CGFloat? = nil) {
         self.init()
         title.flatMap { setTitle($0, for: .normal) }
         titleColor.flatMap { setTitleColor($0, for: .normal) }
@@ -21,7 +21,7 @@ extension UIButton {
         }
     }
 
-    func setUI(title: String? = nil, titleColor: UIColor, font: UIFont, bgColor: UIColor? = nil, bgImage: UIImage? = nil, borderWidth: CGFloat? = nil, borderColor: UIColor? = nil, cornerRadius: CGFloat = 0) {
+    public func setUI(title: String? = nil, titleColor: UIColor, font: UIFont, bgColor: UIColor? = nil, bgImage: UIImage? = nil, borderWidth: CGFloat? = nil, borderColor: UIColor? = nil, cornerRadius: CGFloat = 0) {
         setTitle(title, for: .normal)
         setTitleColor(titleColor, for: .normal)
         titleLabel?.font = font
@@ -37,12 +37,12 @@ extension UIButton {
         layer.masksToBounds = true
     }
 
-    func hidden(_ isHidden: Bool) -> UIButton {
+    public func hidden(_ isHidden: Bool) -> UIButton {
         self.isHidden = isHidden
         return self
     }
 
-    func enable(_ isEnable: Bool) -> UIButton {
+    public func enable(_ isEnable: Bool) -> UIButton {
         self.isEnabled = isEnable
         return self
     }

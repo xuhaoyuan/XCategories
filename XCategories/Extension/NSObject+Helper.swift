@@ -1,14 +1,14 @@
 extension Selector {
     /// Selectors can be used as unique `void *` keys, this gets that key.
-    var key: UnsafeRawPointer { return unsafeBitCast(self, to: UnsafeRawPointer.self) }
+    public var key: UnsafeRawPointer { return unsafeBitCast(self, to: UnsafeRawPointer.self) }
 }
 
 extension NSObject {
-    func getAssociatedValue(for key: UnsafeRawPointer) -> Any? {
+    public func getAssociatedValue(for key: UnsafeRawPointer) -> Any? {
         return objc_getAssociatedObject(self, key)
     }
 
-    func setAssociatedValue(_ value: Any?, forKey key: UnsafeRawPointer) {
+    public func setAssociatedValue(_ value: Any?, forKey key: UnsafeRawPointer) {
         objc_setAssociatedObject(self, key, value, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
     }
 }

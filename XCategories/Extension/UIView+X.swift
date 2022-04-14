@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 extension UIView {
     @objc convenience init(color: UIColor, cornerRadius: CGFloat = 0) {
@@ -36,7 +37,7 @@ extension UIView {
 
 // MARK: 点击事件
 extension UIView {
-    @objc func addTapGesture(handler: @escaping () -> Void) {
+    @objc public func addTapGesture(handler: @escaping () -> Void) {
         isUserInteractionEnabled = true
         let tap = UITapGestureRecognizer {
             handler()
@@ -46,7 +47,7 @@ extension UIView {
 }
 
 extension UIView {
-    var corner: CGFloat {
+    public var corner: CGFloat {
         get {
             return layer.cornerRadius
         }
@@ -56,7 +57,7 @@ extension UIView {
         }
     }
     
-    var masksToBounds: Bool {
+    public var masksToBounds: Bool {
         get {
             return layer.masksToBounds
         }
@@ -65,13 +66,12 @@ extension UIView {
         }
     }
     
-    func border(color: UIColor, width: CGFloat) {
+    public func border(color: UIColor, width: CGFloat) {
         layer.borderColor = color.cgColor
         layer.borderWidth = width
     }
     
-    /// f
-    func rectCorner(rect: UIRectCorner, corners: CGFloat) {
+    public func rectCorner(rect: UIRectCorner, corners: CGFloat) {
         let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: rect, cornerRadii: CGSize(width: corners, height: corners))
         let maskLayer = CAShapeLayer()
         maskLayer.path = path.cgPath
@@ -79,7 +79,7 @@ extension UIView {
         layer.mask = maskLayer
     }
     
-    func screenShot() -> UIImage? {
+    public func screenShot() -> UIImage? {
         let format = UIGraphicsImageRendererFormat()
         format.prefersExtendedRange = true
         let renderer = UIGraphicsImageRenderer(bounds: self.bounds, format: format)

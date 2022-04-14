@@ -1,4 +1,5 @@
-///可以设置切不同位置的圆角
+import UIKit
+
 open class CustomCornerView: UIView {
     open var cornerR: CGFloat
     open var roundingCorners: UIRectCorner

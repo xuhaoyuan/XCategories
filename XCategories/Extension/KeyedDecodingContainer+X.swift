@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
-protocol defaultKeyedDecodingEnable { }
-///当json数据某个值为空时，给予默认值
+
+
 public extension KeyedDecodingContainer {
 
     func decode(_ type: Bool.Type, forKey key: KeyedDecodingContainer.Key) throws -> Bool {
