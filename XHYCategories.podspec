@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'XCategories'
+  s.name             = 'XHYCategories'
   s.version          = '0.1.0'
   s.summary          = 'A short description of XCategories.'
 
