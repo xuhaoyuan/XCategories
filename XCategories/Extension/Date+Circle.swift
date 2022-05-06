@@ -83,19 +83,19 @@ extension DateFormatter {
 
 extension Calendar {
 
-    func isDateInCurrentYear(_ date: Date) -> Bool {
+    public func isDateInCurrentYear(_ date: Date) -> Bool {
         let currentYear = self.component(.year, from: Date())
         let dateYear = self.component(.year, from: date)
         return currentYear == dateYear
     }
 
-    func isDateInPreviousYear(_ date: Date) -> Bool {
+    public func isDateInPreviousYear(_ date: Date) -> Bool {
         let currentYear = self.component(.year, from: Date())
         let dateYear = self.component(.year, from: date)
         return currentYear == (dateYear + 1)
     }
 
-    func isDateInPrevious(nDays: Int) -> (_ date: Date) -> Bool {
+    public func isDateInPrevious(nDays: Int) -> (_ date: Date) -> Bool {
         return { date in
             return self.isDate(date, inSameDayAs: Date().addingTimeInterval(-TimeInterval(nDays * 60 * 60 * 24)))
         }

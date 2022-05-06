@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 
 extension UIView {
-    @objc convenience init(color: UIColor, cornerRadius: CGFloat = 0) {
+    public convenience init(color: UIColor, cornerRadius: CGFloat = 0) {
         self.init(frame: .zero)
         self.backgroundColor = color
         if cornerRadius > 0 {

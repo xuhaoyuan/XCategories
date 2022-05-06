@@ -1,4 +1,4 @@
-# XCategories
+# XHYCategories
 
 [![CI Status](https://img.shields.io/travis/xuhaoyuan/XCategories.svg?style=flat)](https://travis-ci.org/xuhaoyuan/XCategories)
 [![Version](https://img.shields.io/cocoapods/v/XCategories.svg?style=flat)](https://cocoapods.org/pods/XCategories)
@@ -17,7 +17,7 @@ XCategories is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'XCategories'
+pod 'XHYCategories'
 ```
 
 ## Author
@@ -26,4 +26,4 @@ xuhaoyuan, haoyuan.xu@duodian.com
 
 ## License
 
-XCategories is available under the MIT license. See the LICENSE file for more info.
+XHYCategories is available under the MIT license. See the LICENSE file for more info.

@@ -9,7 +9,7 @@ extension String {
         }
     }
 
-    var isChinese: Bool {
+    public var isChinese: Bool {
         for value in self {
             guard ("\u{4E00}" <= value && value <= "\u{9FA5}") else { return false }
         }
@@ -18,7 +18,7 @@ extension String {
 }
 
 extension String {
-    func QRCode() -> UIImage? {
+    public func QRCode() -> UIImage? {
         let data = self.data(using: String.Encoding.ascii)
         guard let filter = CIFilter(name: "CIQRCodeGenerator") else { return nil }
         filter.setValue(data, forKey: "inputMessage")

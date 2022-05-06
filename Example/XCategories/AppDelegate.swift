@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import XCategories
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
