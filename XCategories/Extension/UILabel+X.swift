@@ -2,7 +2,6 @@ import UIKit
 
 public extension UILabel {
 
-
     convenience init(text: String? = nil, size: CGFloat, weight: UIFont.Weight, color: UIColor? = nil, alignment: NSTextAlignment = .left) {
         self.init(text: text, font: UIFont.systemFont(ofSize: size, weight: weight), color: color, alignment: alignment)
     }

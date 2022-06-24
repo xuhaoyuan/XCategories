@@ -2,12 +2,12 @@ import UIKit
 
 public extension UIColor {
 
-    convenience init?(hexString: String) {
-        self.init(hexString: hexString, alpha: 1.0)
+    convenience init?(hex: String) {
+        self.init(hex: hex, alpha: 1.0)
     }
 
-    convenience init?(hexString: String, alpha: Float) {
-        var hex = hexString.uppercased()
+    convenience init?(hex: String, alpha: Float) {
+        var hex = hex.uppercased()
         if hex.hasPrefix("#") {
             hex = String(hex.dropFirst())
         }

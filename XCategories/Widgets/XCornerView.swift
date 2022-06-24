@@ -28,7 +28,7 @@ open class XCornerView: UIView {
 
     override open func layoutSublayers(of layer: CALayer) {
         super.layoutSublayers(of: layer)
-        let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: roundingCorners, cornerRadii: CGSize(width: cornerR, height: corner))
+        let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: roundingCorners, cornerRadii: CGSize(width: cornerR, height: cornerR))
         let maskLayer = CAShapeLayer()
         maskLayer.path = path.cgPath
         maskLayer.frame = bounds

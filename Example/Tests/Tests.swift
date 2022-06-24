@@ -1,5 +1,5 @@
 import XCTest
-import XCategories
+import XHYCategories
 
 class Tests: XCTestCase {
     

@@ -6,7 +6,7 @@ extension UIView {
         self.init(frame: .zero)
         self.backgroundColor = color
         if cornerRadius > 0 {
-            self.corner = cornerRadius
+            self.cornerRadius = cornerRadius
         }
     }
 }
@@ -35,19 +35,21 @@ extension UIView {
     }
 }
 
-// MARK: 点击事件
 extension UIView {
-    @objc public func addTapGesture(handler: @escaping () -> Void) {
+
+    @discardableResult
+    public func addTapGesture(handler: @escaping () -> Void) -> UITapGestureRecognizer {
         isUserInteractionEnabled = true
         let tap = UITapGestureRecognizer {
             handler()
         }
         addGestureRecognizer(tap)
+        return tap
     }
 }
 
 extension UIView {
-    public var corner: CGFloat {
+    public var cornerRadius: CGFloat {
         get {
             return layer.cornerRadius
         }
