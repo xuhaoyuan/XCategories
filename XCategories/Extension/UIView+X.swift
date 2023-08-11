@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 
 extension UIView {
-    public convenience init(color: UIColor, cornerRadius: CGFloat = 0) {
+    public convenience init(color: UIColor?, cornerRadius: CGFloat = 0) {
         self.init(frame: .zero)
         self.backgroundColor = color
         if cornerRadius > 0 {
@@ -12,12 +12,12 @@ extension UIView {
 }
 
 extension UIView {
-    open func show(_ vc: UIViewController, sender: Any?) {
+    public func show(_ vc: UIViewController, sender: Any?) {
         vc.hidesBottomBarWhenPushed = true
         viewController?.show(vc, sender: sender)
     }
     
-    open func present(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)? = nil) {
+    public func present(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)? = nil) {
         viewController?.present(viewControllerToPresent, animated: flag, completion: completion)
     }
     

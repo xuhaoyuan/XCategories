@@ -59,6 +59,14 @@ public class XGradientLabel: UIView {
     public func set(beginColor: UIColor, endColor: UIColor) {
         gradientLayer.colors = [beginColor.cgColor, endColor.cgColor]
     }
+    
+    public func set(colors: [UIColor]) {
+        gradientLayer.colors = colors.map({ $0.cgColor })
+        let spacing: CGFloat = 1.0/CGFloat((colors.count - 1))
+        gradientLayer.locations = colors.enumerated().map({
+            NSNumber(value: CGFloat($0.offset) * spacing)
+        })
+    }
 
     override public func layoutSubviews() {
         super.layoutSubviews()
