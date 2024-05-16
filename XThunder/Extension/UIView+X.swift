@@ -6,7 +6,7 @@ extension UIView {
         self.init(frame: .zero)
         self.backgroundColor = color
         if cornerRadius > 0 {
-            self.cornerRadius = cornerRadius
+            self.mCornerRadius = cornerRadius
         }
     }
 }
@@ -49,7 +49,7 @@ extension UIView {
 }
 
 extension UIView {
-    public var cornerRadius: CGFloat {
+    public var mCornerRadius: CGFloat {
         get {
             return layer.cornerRadius
         }

@@ -1,23 +1,23 @@
 PODS:
   - SnapKit (5.6.0)
-  - XHYCategories (0.1.1):
+  - XThunder (0.1.2):
     - SnapKit
 
 DEPENDENCIES:
-  - XHYCategories (from `../`)
+  - XThunder (from `../`)
 
 SPEC REPOS:
   trunk:
     - SnapKit
 
 EXTERNAL SOURCES:
-  XHYCategories:
+  XThunder:
     :path: "../"
 
 SPEC CHECKSUMS:
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
-  XHYCategories: 84645e04e0446ae2d2868e2f887f01235a6bd7e5
+  XThunder: b4f6dd588fd2250ebc916200381cd3db1f702a9c
 
-PODFILE CHECKSUM: 42d47d0d3f35486a7e26ff1557947ad51774cd17
+PODFILE CHECKSUM: 2d443d8732f6efc62f15ad65df37de61833da351
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.15.2

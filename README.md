@@ -17,12 +17,12 @@ XCategories is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'XHYCategories'
+pod 'XThunder'
 ```
 
 ## Author
 
-xuhaoyuan, haoyuan.xu@duodian.com
+xuhaoyuan, 38752437@qq.com
 
 ## License
 

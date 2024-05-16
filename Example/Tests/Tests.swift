@@ -1,5 +1,5 @@
 import XCTest
-import XHYCategories
+import XThunder
 
 class Tests: XCTestCase {
     

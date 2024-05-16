@@ -8,7 +8,7 @@
 
 import Foundation
 
-final public class CancelableTask {
+final public class XCancelableTask {
 
     private var workItem: DispatchWorkItem?
 

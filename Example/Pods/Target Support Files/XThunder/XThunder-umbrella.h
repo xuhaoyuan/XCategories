@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double XHYCategoriesVersionNumber;
-FOUNDATION_EXPORT const unsigned char XHYCategoriesVersionString[];
+FOUNDATION_EXPORT double XThunderVersionNumber;
+FOUNDATION_EXPORT const unsigned char XThunderVersionString[];
 

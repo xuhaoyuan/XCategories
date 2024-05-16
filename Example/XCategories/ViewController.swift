@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import XHYCategories
+import XThunder
 
 class ViewController: UIViewController {
 

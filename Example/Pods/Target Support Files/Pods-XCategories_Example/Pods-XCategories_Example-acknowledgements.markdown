@@ -24,7 +24,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
-## XHYCategories
+## XThunder
 
 Copyright (c) 2022 xuhaoyuan <haoyuan.xu@duodian.com>
 
